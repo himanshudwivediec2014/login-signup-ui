@@ -1,0 +1,95 @@
+.login-container {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+
+  .form-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 33px;
+    line-height: 1.66;
+    font-size: 36px;
+  }
+}
+
+.remember-me {
+  position: absolute;
+  opacity: 0;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  & + label:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 1px solid #a5a5a5;
+    display: inline-block;
+    border-radius: 2px;
+    background: white;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  // Box checked
+  &:checked + label:after {
+    content: "";
+    position: absolute;
+    transform: rotate(45deg);
+    height: 9px;
+    width: 5px;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    left: 5px;
+    top: 5px;
+  }
+}
+
+.form-group {
+  font-size: 15px;
+  position: relative;
+  margin-bottom: 25px;
+
+  input[type='text'] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #a5a5a5;
+    padding-left: 25px;
+  }
+
+  button[type='submit'] {
+    padding: 12px 40px;
+  }
+
+  label {
+    position: relative;
+
+    .username-form-icon:before {
+      content: "";
+      background-image: url("../../../../../assets/img/user-icon.svg");
+      background-size: 10px 20px;
+      position: absolute;
+      width: 10px;
+      height: 15px;
+      background-repeat: no-repeat;
+      top: -8px;
+    }
+
+    .password-form-icon:before {
+      content: "";
+      background-image: url("../../../../../assets/img/password-icon.svg");
+      background-size: 10px 20px;
+      position: absolute;
+      width: 10px;
+      height: 15px;
+      background-repeat: no-repeat;
+      top: -8px;
+    }
+  }
+}

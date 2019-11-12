@@ -1,0 +1,21 @@
+<div class="login-signup">
+
+  <div class="container">
+    <div class="content">
+      <div class="row" [ngStyle]="{ 'flex-direction': isLogin ? 'row-reverse' : 'row' }">
+    <!--  <div class="row" >-->
+        <div class="col-lg-6">
+          <router-outlet></router-outlet>
+        </div>
+        <div class="col-lg-6">
+
+          <div class="side-img">
+            <img [src]="sideDetails['img']" alt="">
+            <a (click)="togglePage()">{{sideDetails['linkTitle']}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
